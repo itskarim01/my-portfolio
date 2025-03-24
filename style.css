@@ -27,7 +27,7 @@ header, main{
 header{
     background-color: var(--dark);
     width: fit-content;
-    height: fit-content;
+    height: 97vh;
     padding-bottom: 20px;
 }
 
@@ -103,6 +103,11 @@ section{
     width: var(--cont-width);
     padding: var(--padding);
     margin-top: 50px;
+}
+
+section h2{
+    margin-bottom: 1.8rem;
+    font-size: 30px;
 }
 
 #home{
@@ -266,10 +271,6 @@ section{
 }
 
 /* Education */
-#edu h2, #exp h2{
-    margin-bottom: 1.8rem;
-}
-
 .edu-container{
     display: flex;
 }
@@ -299,12 +300,78 @@ section{
     padding: var(--padding);
 }
 
-.co
+.column1, .column2{
+    display: flex;
+    gap: 16px;
+}
+
+.column1 {
+    margin-bottom: 16px;
+}
 
 #service article{
     width: 50%;
 }
 
 #service article i{
-    font-size: 100px;
+    font-size: 90px;
+}
+
+/* Portfolio */
+#port .category{
+    list-style: none;
+    display: flex;
+    border-top: 3px solid var(--acc-clr);
+    border-bottom: 3px solid var(--acc-clr);
+    border-left: 3px solid var(--acc-clr);
+    width: fit-content;
+}
+
+#port .category > button{
+    text-transform: uppercase;
+    font-size: 16px;
+    border: none;
+    border-right: 3px solid var(--acc-clr);
+    background: none;
+    padding: 10px;
+    text-align: center;
+    transition: all 0.25s ease-in;
+}
+
+#port .category > button:hover{
+    background-color: var(--acc-clr);
+}
+
+#port .category > button:nth-of-type(1){
+    background-color: var(--acc-clr);
+}
+
+.port-container{
+    display: grid;
+    row-gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 30px;
+}
+
+.port-container > div{
+    background-color: var(--acc-clr);
+    width: 230px;
+    height: 230px;
+}
+
+/* Review */
+#review p{
+    font-size: 1.2rem;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.user img{
+    width: 90px;
+    height: 90px;
+    margin-right: 12px;
 }
