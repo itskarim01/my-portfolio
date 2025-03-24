@@ -1,0 +1,310 @@
+:root{
+    --acc-clr: #FF7E71;
+    --bg-clr: #F6D155;
+    --bright: #ffffff;
+    --dark: #393939;
+    --padding: 40px;
+    --cont-width: 900px; 
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* HEADER */
+.body-container{
+    background-color: var(--bg-clr);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header, main{
+    margin: 0 auto;
+}
+
+header{
+    background-color: var(--dark);
+    width: fit-content;
+    height: fit-content;
+    padding-bottom: 20px;
+}
+
+.passport{
+    width: 300px;
+    height: 300px;
+}
+
+header > nav > ul{
+    list-style: none;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10.9px;
+    padding: 25px;
+}
+
+header > nav > ul > li{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+header > nav > ul > li > a, i {
+    text-decoration: none;
+    color: var(--bright);
+}
+
+header > nav > ul > li > i{
+    color: var(--acc-clr);
+}
+
+.socials{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.socials > a {
+    background-color: var(--acc-clr);
+    font-size: 30px;
+}
+
+.socials > a i {
+    color: var(--dark);
+}
+
+.socials > a:hover{
+    background-color: var(--bright);
+    color: var(--acc-clr);
+}
+
+.socials > a i:hover{
+    color: var(--acc-clr);
+}
+
+
+/* CONTENT:
+   Home */
+main{
+    height: 600px;
+    overflow: auto;
+
+    border: 4px solid black;
+}
+
+main::-webkit-scrollbar{
+    display: none;
+}
+
+section{
+    background-color: var(--bright);
+    width: var(--cont-width);
+    padding: var(--padding);
+    margin-top: 50px;
+}
+
+#home{
+    display: flex;
+    justify-content: space-between;
+}
+
+#home > .text{
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 20px;
+}
+
+.passport2{
+    width: fit-content;
+    height: 300px;
+}
+
+.btn{
+    margin-bottom: 50px;
+    display: flex;
+}
+
+.btn > button:nth-child(1){
+    background-color: var(--dark);
+    color: var(--acc-clr);
+    transition: all 0.2s ease;
+}
+
+.btn > button:nth-child(2){
+    background-color: var(--acc-clr);
+    color: var(--dark);
+    transition: all 0.2s ease;
+}
+
+.btn > button{
+    width: 50%;
+    padding: 16px;
+    font-size: 20px;
+    border: none;
+}
+
+.btn > button:nth-child(1):hover{
+    background-color: #504f4f;
+}
+
+.btn > button:nth-child(2):hover{
+    background-color: #ff988f;
+}
+
+/* About */
+#about{
+    display: block;
+}
+
+#about > .info{
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    gap: 50px;
+}
+
+#about > .info > img{
+    width: 200px;
+    height: 200px;
+}
+
+.info > p > button{
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    background-color: var(--acc-clr);
+    color: var(--dark);
+    transition: all 0.3s ease;
+}
+
+.info > p > button:hover{
+    background-color: var(--dark);
+    color: var(--acc-clr);
+}
+
+.skills{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    row-gap: 16px;
+    column-gap: 70px;
+    justify-content: center;
+}
+
+.percentage{
+    width: 400px;
+    height: 10px;
+}
+
+.progress{
+    color: var(--acc-clr);
+    height: 10px;
+}
+
+.skill-info{
+    width: 380px;
+}
+
+.skills > .design > .skill-info { 
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills > .design > .percentage {
+    border: 2px solid var(--acc-clr);
+}
+
+.skills > .design > .percentage > .progress{
+    background-color: var(--acc-clr);
+    width: 85%;
+}
+
+.skills > .develop > .skill-info { 
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills > .develop > .percentage {
+    border: 2px solid var(--acc-clr);
+}
+
+.skills > .develop > .percentage > .progress{
+    background-color: var(--acc-clr);
+    width: 90%;
+}
+
+.skills > .seo > .skill-info { 
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills > .seo > .percentage {
+    border: 2px solid var(--acc-clr);
+}
+
+.skills > .seo > .percentage > .progress{
+    background-color: var(--acc-clr);
+    width: 95%;
+}
+
+.skills > .market > .skill-info { 
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills > .market > .percentage {
+    border: 2px solid var(--acc-clr);
+}
+
+.skills > .market > .percentage > .progress{
+    background-color: var(--acc-clr);
+    width: 85%;
+}
+
+/* Education */
+#edu h2, #exp h2{
+    margin-bottom: 1.8rem;
+}
+
+.edu-container{
+    display: flex;
+}
+
+.row1, .row2{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-left: 3px solid var(--acc-clr);
+}
+
+.row1 > article:nth-child(1){
+    border-bottom: 3px solid var(--acc-clr);
+}
+
+.row2 > article:nth-child(1){
+    border-bottom: 3px solid var(--acc-clr);
+}
+
+.edu-container article{
+    width: 90%;
+    padding-left: 20px;
+}
+
+/* Services */
+#service{
+    padding: var(--padding);
+}
+
+.co
+
+#service article{
+    width: 50%;
+}
+
+#service article i{
+    font-size: 100px;
+}
