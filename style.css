@@ -3,7 +3,7 @@
     --bg-clr: #F6D155;
     --bright: #ffffff;
     --dark: #393939;
-    --padding: 40px;
+    --padding: 30px;
     --cont-width: 900px; 
 }
 *{
@@ -11,24 +11,21 @@
     padding: 0;
 }
 
-
-/* HEADER */
-.body-container{
-    background-color: var(--bg-clr);
+body{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    gap: 50px;
 }
 
-header, main{
-    margin: 0 auto;
-}
 
-header{
+/* Aside */
+
+aside{
+    display: flex;
+    flex-direction: column;
     background-color: var(--dark);
     width: fit-content;
-    height: 97vh;
-    padding-bottom: 20px;
 }
 
 .passport{
@@ -36,78 +33,67 @@ header{
     height: 300px;
 }
 
-header > nav > ul{
+aside > nav > ul{
     list-style: none;
-    font-size: 18px;
+    font-size: 16px;
     display: flex;
     flex-direction: column;
-    gap: 10.9px;
+    gap: 5px;
     padding: 25px;
 }
 
-header > nav > ul > li{
+aside > nav > ul > li{
     display: flex;
     justify-content: space-between;
     text-align: center;
 }
 
-header > nav > ul > li > a, i {
+aside > nav > ul > li > a, i {
     text-decoration: none;
     color: var(--bright);
 }
 
-header > nav > ul > li > i{
+aside > nav > ul > li > i{
     color: var(--acc-clr);
 }
 
-.socials{
+aside > footer {
     display: flex;
     justify-content: center;
-    gap: 16px;
+    gap: 25px;
+    margin-bottom: 24px;
 }
 
-.socials > a {
+aside > footer > a{
     background-color: var(--acc-clr);
-    font-size: 30px;
+    padding: 10px;
 }
 
-.socials > a i {
+aside > footer > a i{
+    font-size: 25px;
     color: var(--dark);
-}
-
-.socials > a:hover{
-    background-color: var(--bright);
-    color: var(--acc-clr);
-}
-
-.socials > a i:hover{
-    color: var(--acc-clr);
 }
 
 
 /* CONTENT:
    Home */
 main{
-    height: 600px;
-    overflow: auto;
+    width: var(--cont-width);
+    height: 500px;
+    overflow-y: scroll;
 
-    border: 4px solid black;
-}
-
-main::-webkit-scrollbar{
-    display: none;
+    /* border: 4px solid black; */
 }
 
 section{
     background-color: var(--bright);
-    width: var(--cont-width);
-    padding: var(--padding);
+    width: auto;
     margin-top: 50px;
+    padding: var(--padding);
 }
 
 section h2{
     margin-bottom: 1.8rem;
-    font-size: 30px;
 }
 
 #home{
@@ -119,7 +105,7 @@ section h2{
     display: block;
     margin-top: auto;
     margin-bottom: auto;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .passport2{
@@ -127,9 +113,17 @@ section h2{
     height: 300px;
 }
 
-.btn{
+main > .btn{
     margin-bottom: 50px;
+    width: 100%;
     display: flex;
+}
+
+main .btn > button{
+    width: 100%;
+    padding: 16px;
+    font-size: 23px;
+    border: none;
 }
 
 .btn > button:nth-child(1){
@@ -142,13 +136,6 @@ section h2{
     background-color: var(--acc-clr);
     color: var(--dark);
     transition: all 0.2s ease;
-}
-
-.btn > button{
-    width: 50%;
-    padding: 16px;
-    font-size: 20px;
-    border: none;
 }
 
 .btn > button:nth-child(1):hover{
@@ -194,14 +181,13 @@ section h2{
 .skills{
     margin-top: 40px;
     display: grid;
-    grid-template-columns: repeat(2, 400px);
+    grid-template-columns: repeat(2, 45%);
     row-gap: 16px;
     column-gap: 70px;
-    justify-content: center;
 }
 
 .percentage{
-    width: 400px;
+    width: 100%;
     height: 10px;
 }
 
@@ -210,8 +196,9 @@ section h2{
     height: 10px;
 }
 
-.skill-info{
-    width: 380px;
+.skills .skill-info{
+    width: 100%;
+    font-size: 18px;
 }
 
 .skills > .design > .skill-info { 
@@ -296,10 +283,6 @@ section h2{
 }
 
 /* Services */
-#service{
-    padding: var(--padding);
-}
-
 .column1, .column2{
     display: flex;
     gap: 16px;
@@ -349,11 +332,21 @@ section h2{
 .port-container{
     display: grid;
     row-gap: 40px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit,  minmax(230px, 1fr));
     margin-top: 30px;
 }
 
-.port-container > div{
+.port-container div{
+    text-align: center;
+}
+
+.port-container > div > a{
+    text-decoration: none;
+    font-weight: 750;
+    color: var(--dark);
+}
+
+.port-container > div img{
     background-color: var(--acc-clr);
     width: 230px;
     height: 230px;
@@ -371,7 +364,55 @@ section h2{
 }
 
 .user img{
-    width: 90px;
-    height: 90px;
+    width: 75px;
+    height: 75px;
     margin-right: 12px;
 }
+
+/* Contact */
+#contact div{
+    display: flex;
+}
+
+#contact div > .contact-details{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1rem;
+    gap: 10px;
+    width: 50%;
+}
+
+.contact-details a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s ease-in-out; 
+}
+
+.contact-details a:hover{
+    color: var(--acc-clr);
+}
+
+#contact div > form{
+    display: grid;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+}
+
+#contact div > form > input{
+    padding: 10px;
+}
+
+#contact div > form > button{
+    background: var(--acc-clr);
+    color: var(--dark);
+    transition: all 0.3s ease-in;
+    padding: 10px;
+}
+
+#contact div > form > button:hover{
+    background-color: var(--dark);
+    color: var(--acc-clr);
+}
+
+/* Media Queries */
