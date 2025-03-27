@@ -64,14 +64,17 @@ aside > footer {
     margin-bottom: 24px;
 }
 
-aside > footer > a{
+aside > footer > a i{
+    font-size: 30px;
     background-color: var(--acc-clr);
-    padding: 10px;
+    color: var(--dark);
+    padding: 8px;
+    transition: all 0.3s ease-in-out;
 }
 
-aside > footer > a i{
-    font-size: 25px;
-    color: var(--dark);
+aside > footer > a i:hover{
+    background-color: var(--bright);
+    color: var(--acc-clr);
 }
 
 
@@ -415,4 +418,4 @@ main .btn > button{
     color: var(--acc-clr);
 }
 
-/* Media Queries */
+/* MEDIA QUERIES */
