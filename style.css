@@ -15,7 +15,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 30px;
 }
 
 
@@ -26,6 +26,7 @@ aside{
     flex-direction: column;
     background-color: var(--dark);
     width: fit-content;
+    float: left;
 }
 
 .passport{
@@ -51,6 +52,11 @@ aside > nav > ul > li{
 aside > nav > ul > li > a, i {
     text-decoration: none;
     color: var(--bright);
+    transition: all 0.3s ease-in-out;
+}
+
+aside > nav > ul > li > a:hover{
+    color: var(--acc-clr);
 }
 
 aside > nav > ul > li > i{
@@ -373,6 +379,10 @@ main .btn > button{
 }
 
 /* Contact */
+#contact{
+    margin-bottom: 50px;
+}
+
 #contact div{
     display: flex;
 }
